@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+</head>
+<body>
+
+<div [class]="{'card':true}">
+    <div class="expired" *ngIf="tempdata.expired">{{tempdata.expired}}</div>
+    <div class="title">
+        <span>{{tempdata.title}}</span>
+        <button *ngIf="apply" (click)="hallticket()">APPLY</button>
+    </div>
+    <div class="static">Date & Time:</div>
+    <div class="timeandlocation">
+        <p class="date">{{tempdata.date}}</p>
+        <p> <span class="p1"> </span> <span> {{tempdata.location}}</span> </p>
+    </div>
+    <hr>
+    <div class="static">Job Roles:</div>
+    <div class="jobroles" >
+        <p *ngFor="let jobs of tempdata.jobroles"> <img src="../../../assets/quantum_screen_assets/icons/Instructional Designer.svg" alt="logo"> {{jobs}} </p>
+    </div>
+    <div class="moredetails">
+        <button *ngIf="viewde" (click)="openThisIndex(tempdata.index)">VIEW MORE DETAILS</button>
+    </div>
+</div>
+</body>
+</html>

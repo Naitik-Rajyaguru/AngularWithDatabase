@@ -1,0 +1,24 @@
+[
+    {
+      "title" : "Walk In for Designer Job Role",
+      "date" : "10-Jul-2021 to 11-Jul-2021",
+      "location" : "Mumbai",
+      "jobroles":["Instructional Designer"],
+      "expired" : "Expires in 5 days",
+      "index":0
+    },
+    {
+      "title" : "Walk In for Developer Job Role",
+      "date" : "10-Jul-2021 to 11-Jul-2021",
+      "location" : "Mumbai",
+      "jobroles":["Software enginneer", "Software Quality enginneer"],
+      "index":1
+    },
+    {
+      "title" : "Walk In for Designer and Developer Job Role",
+      "date" : "10-Jul-2021 to 11-Jul-2021",
+      "location" : "Mumbai",
+      "jobroles":["Instructional Designer", "Software enginneer", "Software Quality enginneer"],
+      "index":2
+    }
+  ]

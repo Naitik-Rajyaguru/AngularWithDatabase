@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+</head>
+<body>
+    <div class="main_details">
+        <form action="">
+            <div [class]="{'tExp':true, no:condition}">
+                <span class="input">Years Of Experience*</span>
+                <p><input type="text" name="" id=""></p>
+            </div>
+            <div [class]="{'cCTC':true, no:condition}">
+                <span class="input">Current CTC* (in Rupees)</span>
+                <p><input type="text" name="" id=""></p>
+            </div>
+            <div [class]="{'eCTC':true, no:condition}">
+                <span class="input">Expected CTC* (in Rupees)</span>
+                <p><input type="text" name="" id=""></p>
+            </div>
+            <div [class]="{'techExpert':true, no:condition}">
+                <span class="input">Select All Technology You Are Expertise In*</span>
+                    <p><input type="checkbox" name="" id=""> Javascript</p>
+                    <p><input type="checkbox" name="" id=""> Angular Js</p>
+                    <p><input type="checkbox" name="" id=""> React</p>
+                    <p><input type="checkbox" name="" id=""> Node Js</p>
+                    <p><input type="checkbox" name="" id=""> Others</p>
+                <span class="input">If Others, Please Mention</span>
+                <p><input type="text" name="" id=""></p>
+                
+            </div>
+            <div class="techFamil">
+                <span class="input">Select All Technology You Are Familiar In</span>
+                    <p><input type="checkbox" name="" id=""> Javascript</p>
+                    <p><input type="checkbox" name="" id=""> Angular Js</p>
+                    <p><input type="checkbox" name="" id=""> React</p>
+                    <p><input type="checkbox" name="" id=""> Node Js</p>
+                    <p><input type="checkbox" name="" id=""> Others</p>
+                <span class="input">If Others, Please Mention</span>
+                <p><input type="text" name="" id=""></p>
+
+            </div>
+            <div [class]="{'onNotic':true, no:condition}">
+                <span class="input">Are You Currently On Notice Period?*</span>
+                <div class="radio">
+                    <p><input type="radio" name="" id=""> Yes</p>
+                    <p><input type="radio" name="" id=""> No</p>
+                </div>
+            </div>
+            <div [class]="{'duration':true, no:condition}">
+                <div class="date">
+                    <span class="input">If Yes, when will your notice period end?*</span>
+                    <p><input type="date" name="" id=""></p>
+                </div>
+                <div class="durationMonth">
+                    <span class="input">How long is your notice period?* (Mention in months)</span>
+                    <p>
+                        <select name="" id="">
+                            <option value="">2 months</option>
+                            <option value="">3 months</option>
+                        </select>
+                    </p>
+                </div>
+
+            </div>
+            <div class="prevTest">
+                <span class="input">Have You Appeared For Any Test By Zeus in the past 12 months?*</span>
+                <div class="radio">
+                    <p><input type="radio" name="" id=""> Yes</p>
+                    <p><input type="radio" name="" id=""> No</p>
+                </div>
+                <span class="input">If Yes, which role did you apply for?</span>
+                <p><input type="text" name="" id=""></p>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

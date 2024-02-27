@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+</head>
+<body>
+    <div class="create_cancle">
+        <img src="..\..\assets\quantum_screen_assets\icons\back.svg" alt="back">
+        <p>Create An Account</p>
+        <button class="cancle">CANCLE</button>
+        <button [class]='{"create":true, "enable":condition}' (click)="sendDataToApi()">CREATE</button>
+    </div>
+</body>
+</html>

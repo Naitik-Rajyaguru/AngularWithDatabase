@@ -1,0 +1,133 @@
+body {
+  margin: 0px;
+  background-color: #EEEEEE;
+  height: 100vh;
+  font-size: 14px;
+}
+
+body * {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+.loginForm {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+}
+
+input[type=checkbox] {
+  accent-color: #1F7A54;
+  transform: scale(1.2);
+}
+
+.form {
+  background-color: #FFFFFF;
+  border-top: 4px solid #3AC7EC;
+  padding-top: 0px;
+  padding: 10px 20px;
+  width: 480px;
+  display: block;
+  margin: 50px auto 0;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.form_title {
+  color: #222222;
+}
+
+.form_title p {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto;
+  font-size: 24px;
+}
+
+.crediantial input {
+  border-width: 0px 0px 2px 0px;
+  border-color: #EEEEEE;
+  width: 100%;
+}
+
+.crediantial input ::-moz-placeholder {
+  font-size: 16px;
+  color: #666666;
+}
+
+.crediantial input ::placeholder {
+  font-size: 16px;
+  color: #666666;
+}
+
+.crediantial a {
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  color: #1F7A54;
+}
+
+.username {
+  margin: 30px 0px 30px;
+}
+
+.password img {
+  display: block;
+  margin-left: auto;
+  margin-top: -25px;
+}
+
+.checkbox {
+  margin: 30px 0px;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.button button {
+  width: 250px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #3FD28B;
+  padding: 8px 50px;
+  display: block;
+  margin: 0px auto;
+  border: none;
+}
+
+.create_account {
+  display: block;
+  margin: 25px auto 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  font-size: 12px;
+}
+
+.create_account a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #1F7A54;
+}
+
+.footer {
+  margin-bottom: 50px;
+}
+
+.contact {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact span a {
+  text-decoration: none;
+  color: #1F7A54;
+}
+
+.divider {
+  border-left: 2px solid black;
+} /*# sourceMappingURL=login-form.component.css.map */

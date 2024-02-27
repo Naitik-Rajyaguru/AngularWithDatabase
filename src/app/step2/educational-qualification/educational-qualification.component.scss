@@ -1,0 +1,49 @@
+body{
+    display: grid;
+}
+body *{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+span{
+    color: #666666;
+    font-size: 12px;
+    display: block;
+}
+
+input[type=text]{
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #0000003D;
+    width: 100%;
+}
+select{
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #0000003D;
+    width: 100%;
+}
+.educational_qualification{
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+    margin-top: 0px;
+    border-radius: 2px;
+    
+}
+.educational_qualification > form{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+}
+.percentage, .passingYear, .collageCity{
+    grid-column: 1 / 1;
+}
+
+.horizontal{
+    grid-column: 1 / span 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}

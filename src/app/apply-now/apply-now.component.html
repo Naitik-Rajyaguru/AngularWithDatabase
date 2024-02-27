@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body *ngIf="data">
+    <app-logo-header [imgUrl]="'../../assets/quantum_screen_assets/icons/Zeus-LMS-logo.svg'"></app-logo-header>
+
+    <app-jobcard [viewde]="false" [apply]="true"  [tempdata]="data[index]" [inputData]="applicationForm"></app-jobcard>
+
+    <app-qualification-title [innerText]="'Pre-requisites & Application Process'"></app-qualification-title>
+
+
+    <div class="slotandpreferences" >
+      <p>Time Slots & Preferences</p>
+      <span class="input">Select a Time Slot:</span>
+      <div>
+          <p><input type="radio" name="time" id="" value="9:00 AM to 11:00 AM" [(ngModel)]="applicationForm.time"> <span>9:00 AM to 11:00 AM</span></p>
+          <p><input type="radio" name="time" id="" value="1:00 PM to 3:00 PM"> <span>1:00 PM to 3:00 PM</span></p>
+      </div>
+      <hr>
+      <span class="input">Select Your Preference :</span>
+      <div>
+        <p *ngFor="let title of jobroles; let i=index"  ><input type="checkbox" name="'checkbox'+{{i}}" id="" value="{{title.value}}" [(ngModel)]="title.selected">{{title.value}}</p>
+          <!-- <p><input type="checkbox" name="" id=""> <span>Instructional Designer</span></p>
+          <p><input type="checkbox" name="" id=""> <span>Software Engineer</span></p>
+          <p><input type="checkbox" name="" id=""> <span>Software Quality Engineer</span></p> -->
+      </div>
+      <hr>
+      <p class="resume"><img src="../../../assets/quantum_screen_assets/icons/Upload_black_24dp.svg" alt="ul"><span>Upload Updated Resume</span></p>
+    </div>
+
+
+
+
+
+    <!-- <app-slot></app-slot> -->
+    <div *ngFor="let title of data[index].jobroles">
+        <!-- <app-qualification-title [innerText]=title></app-qualification-title> -->
+        <app-rolediscription [whichDiscription]=title></app-rolediscription>
+    </div>
+
+
+
+</body>
+</html>

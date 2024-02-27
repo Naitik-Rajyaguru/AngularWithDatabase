@@ -1,0 +1,193 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+
+
+    <app-qualification-title [innerText]="educational"></app-qualification-title>
+
+
+    <div class="educational_qualification">
+      <form action="">
+          <div class="percentage">
+              <span class="input">Aggregate Persentage*</span>
+              <p><input type="text" name="persentage" id="" [(ngModel)]="qualificationData.edu.persentage"></p>
+              <span *ngIf="!qualificationData.edu.persentage" class="validation">Required</span>
+          </div>
+          <div class="passingYear">
+              <span class="input">Year Of Passing*</span>
+              <p>
+                  <select name="passingy" id="" [(ngModel)]="qualificationData.edu.passingy">
+                      <option value="2020">2020</option>
+                      <option value="2024">2024</option>
+                  </select>
+              </p>
+              <span *ngIf="!qualificationData.edu.passingy" class="validation">Required</span>
+          </div>
+          <div class="qualificationLevel horizontal">
+              <div class="mainqualification">
+                  <span class="input">Qualification*</span>
+                  <p>
+                      <select name="qualificaiton" id="" [(ngModel)]="qualificationData.edu.qualificaiton">
+                          <option value="Bachelor in Technology (B.tech)">Bachelor in Technology (B.tech)</option>
+                          <option value="Master in TEchnology (M.tech)">Master in TEchnology (M.tech)</option>
+                      </select>
+                  </p>
+                  <span *ngIf="!qualificationData.edu.qualificaiton" class="validation">Required</span>
+              </div>
+
+              <div class="subqualification">
+                  <span class="input">Stream*</span>
+                  <p>
+                      <select name="stream" id="" [(ngModel)]="qualificationData.edu.stream">
+                          <option value="Information technology">Information Technology</option>
+                          <option value="Computer Science">Computer Science</option>
+                      </select>
+                  </p>
+                  <span *ngIf="!qualificationData.edu.stream" class="validation">Required</span>
+              </div>
+
+          </div>
+          <div class="collage horizontal">
+              <div class="maincollege">
+                  <span class="input">College*</span>
+                  <p>
+                      <select name="collage" id="" [(ngModel)]="qualificationData.edu.collage">
+                          <option value="Nirma Univercity">Nirma Univercity</option>
+                          <option value="IIT bombay">IIT bombay</option>
+                          <option value="Other">Other</option>
+                      </select>
+                  </p>
+                  <span *ngIf="!qualificationData.edu.collage" class="validation">Required</span>
+              </div>
+
+              <div class="subcollege">
+                  <span class="input">If others, please enter your college name</span>
+                  <p><input type="text" name="ocollage" id="" [(ngModel)]="qualificationData.edu.ocollage"></p>
+                  <span *ngIf="ocollagecondtion" style="color: red;">Required</span>
+              </div>
+          </div>
+          <div class="collageCity">
+              <span class="input">Where is your collage located?*</span>
+              <p><input type="text" name="collagecity" id="" [(ngModel)]="qualificationData.edu.collagecity"></p>
+              <span *ngIf="!qualificationData.edu.collagecity" class="validation">Required</span>
+          </div>
+      </form>
+  </div>
+
+
+
+
+
+
+
+    <app-qualification-title [innerText]="professional"></app-qualification-title>
+
+
+    <div class="fresher_experienced">
+      <span>Applicant Type*</span> <br>
+      <div>
+          <p><input type="radio" name="applitype" id="" (click)="change1()" [(ngModel)]="qualificationData.prof.fresher" value="fresher"> Fresher</p>
+          <p><input type="radio" name="applitype" id="" (click)="change2()" checked [(ngModel)]="qualificationData.prof.fresher" value="experianced"> Experienced</p>
+          <span  *ngIf="!qualificationData.prof.fresher" class="validation">Required</span>
+      </div>
+    </div>
+
+
+    <div class="main_details">
+      <form action="">
+          <div [class]="{'tExp':true, no:fresher}">
+              <span class="input">Years Of Experience*</span>
+              <p><input type="text" name="expY" id="" [(ngModel)]="qualificationData.prof.expY"></p>
+              <span  *ngIf="!qualificationData.prof.expY" class="validation">Required</span>
+          </div>
+          <div [class]="{'cCTC':true, no:fresher}">
+              <span class="input">Current CTC* (in Rupees)</span>
+              <p><input type="text" name="currentCTC" id="" [(ngModel)]="qualificationData.prof.currentCTC"></p>
+              <span *ngIf="!qualificationData.prof.currentCTC" class="validation">Required</span>
+          </div>
+          <div [class]="{'eCTC':true, no:fresher}">
+              <span class="input">Expected CTC* (in Rupees)</span>
+              <p><input type="text" name="expectedCTC" id="" [(ngModel)]="qualificationData.prof.expectedCTC"></p>
+              <span *ngIf="!qualificationData.prof.expectedCTC" class="validation">Required</span>
+          </div>
+          <div [class]="{'techExpert':true, no:fresher}">
+              <span class="input">Select All Technology You Are Expertise In*</span>
+                  <p *ngFor="let item of techexpert; let i = index"><input type="checkbox" name="'techexpert'+ {{i}}" [(ngModel)]="item.selected" value="{{item.value}}"> {{item.value}}</p>
+
+                  <!-- <p><input type="checkbox" name="techexpert1" id="" [(ngModel)]="qualificationData.prof.techexpert" value="Javascript"> Javascript</p>
+                  <p><input type="checkbox" name="techexpert2" id="" [(ngModel)]="qualificationData.prof.techexpert" value="Angualr js"> Angular Js</p>
+                  <p><input type="checkbox" name="techexpert3" id="" [(ngModel)]="qualificationData.prof.techexpert" value="react"> React</p>
+                  <p><input type="checkbox" name="techexpert4" id="" [(ngModel)]="qualificationData.prof.techexpert" value="Node js"> Node Js</p>
+                  <p><input type="checkbox" name="techexpert5" id="" [(ngModel)]="qualificationData.prof.techexpert" value="other"> Others</p> -->
+                  <span *ngIf="techexpertcondition" style="color: red;">Select at least one</span>
+              <span class="input">If Others, Please Mention</span>
+              <p><input type="text" name="ottherexpert" id="" [(ngModel)]="qualificationData.prof.othertechexpert"></p>
+
+
+          </div>
+          <div class="techFamil">
+              <span class="input">Select All Technology You Are Familiar In</span>
+              <p *ngFor="let item of techfamil; let i = index"><input type="checkbox" name="'techfamil'+ {{i}}" [(ngModel)]="item.selected" value="{{item.value}}"> {{item.value}}</p>
+              <span class="input">If Others, Please Mention</span>
+              <p><input type="text" name="othertech" id="" [(ngModel)]="qualificationData.prof.othertechfamil"></p>
+
+          </div>
+          <div [class]="{'onNotic':true, no:fresher}">
+              <span class="input">Are You Currently On Notice Period?*</span>
+              <div class="radio">
+                  <p><input type="radio" name="onnotic" id="" [(ngModel)]="qualificationData.prof.onNotic" value="yes"> Yes</p>
+                  <p><input type="radio" name="onnotic" id="" [(ngModel)]="qualificationData.prof.onNotic" value="no"> No</p>
+                  <span *ngIf="!qualificationData.prof.onNotic" class="validation">Required</span>
+              </div>
+          </div>
+          <div [class]="{'duration':true, no:fresher}">
+              <div class="date">
+                  <span class="input">If Yes, when will your notice period end?*</span>
+                  <p><input type="date" name="noticdate" id="" [(ngModel)]="qualificationData.prof.noticdate"></p>
+                  <span *ngIf="noticcondition" style="color: red;">Required</span>
+              </div>
+              <div class="durationMonth">
+                  <span class="input">How long is your notice period?* (Mention in months)</span>
+                  <p>
+                      <select name="noticduration" id="" [(ngModel)]="qualificationData.prof.durationNotic">
+                          <option value="2 months">2 months</option>
+                          <option value="3 months">3 months</option>
+                      </select>
+                  </p>
+                  <span *ngIf="noticcondition" style="color: red;">Required</span>
+              </div>
+
+          </div>
+          <div class="prevTest">
+              <span class="input">Have You Appeared For Any Test By Zeus in the past 12 months?*</span>
+              <div class="radio">
+                  <p><input type="radio" name="prvapp" id="" [(ngModel)]="qualificationData.prof.prevapply" value="yes"> Yes</p>
+                  <p><input type="radio" name="prvapp" id="" [(ngModel)]="qualificationData.prof.prevapply" value="no"> No</p>
+                  <span *ngIf="!qualificationData.prof.prevapply" class="validation">Required</span>
+              </div>
+              <span class="input">If Yes, which role did you apply for?</span>
+              <p><input type="text" name="role" id="" [(ngModel)]="qualificationData.prof.whichRole"></p>
+              <span *ngIf="jobapplycondition"  style="color: red;">Required</span>
+          </div>
+
+      </form>
+  </div>
+
+
+
+
+
+
+  <div class="footer_button">
+    <button *ngIf="pshow" (click)="goToPrv()">PREVIOUS</button>
+    <button *ngIf="nshow" (click)="goToNext()">NEXT</button>
+</div>
+
+
+    </body>
+    </html>

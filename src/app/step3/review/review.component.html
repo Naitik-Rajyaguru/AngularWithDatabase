@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="final_review">
+        <div class="ipersonalinfo i">
+            <p>Personal Information</p>
+            <p class="edit" style="display: flex; gap: 10px;">
+                <img src="../../../assets/quantum_screen_assets/icons/edit.png" alt="penc">
+                <span style="color: #1F7A54;">Edit</span>
+            </p>
+        </div>
+
+
+        <div class="personalinfo">
+            <div class="details">
+                <form action="">
+                    <div class="subdetail">
+                        <span class="input">First Name*</span>
+                        <p>{{finaldata.personal.fName}}  </p>
+                    </div>
+                    <div class="subdetail">
+                        <span class="input">Last Name*</span>
+                        <p>{{finaldata.personal.lName}}  </p>
+                    </div>
+                    <div class="subdetail">
+                        <span class="input">Email*</span>
+                        <p>{{finaldata.personal.Email}}</p>
+                    </div>
+                    <div class="subdetail">
+                        <span class="input">Phone Number*</span>
+                        <p> + 91 {{finaldata.personal.phone}}</p>
+                    </div>
+                    <div class="subdetail">
+                        <div class="Resume">
+                            <img src="../../../assets/quantum_screen_assets\icons\Upload_black_24dp.svg" alt="">
+                            <p>UPLOAD RESUME</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="subdetail">
+                        <span class="input">Enter Portfolio URL (if any)</span>
+                        <p>{{finaldata.personal.portfolio}}  </p>
+                    </div>
+                    <div class="subdetail">
+                        <span class="input">Preferred Job Roles*</span>
+                        <p *ngFor="let i of finaldata.personal.roles">  {{i}}</p>
+
+                    </div>
+                    <div class="subdetail">
+                        <span class="input">If You Are Registering Via A Referral, Please Mention Full Name Of The Employee Who Referred You</span>
+                        <p>{{finaldata.personal.Rname}}  </p>
+                    </div>
+                    <div class="subdetail">
+                        <!-- <p> </p> -->
+                        <p *ngIf="finaldata.personal.sub"> Send me job related updates via mail</p>
+                    </div>
+
+                </form>
+            </div>
+            <div class="profilepic">
+                <div>
+                    <img src="../../../assets/quantum_screen_assets/icons/account_circle.svg" alt="Profile pic">
+                </div>
+            </div>
+        </div>
+
+        <div class="iqualification i">
+            <p>Qualifications</p>
+            <p class="edit" style="display: flex; gap: 10px;">
+                <img src="../../../assets/quantum_screen_assets/icons/edit.png" alt="penc">
+                <span style="color: #1F7A54;">Edit</span>
+            </p>
+        </div>
+
+
+        <div class="qualification_title">
+            <p>Educational Qualifications</p>
+            <div>
+                <img src="../../../assets/quantum_screen_assets/icons/arrow-down.svg" alt="">
+            </div>
+        </div>
+
+
+        <div class="educational_qualification">
+            <form action="">
+                <div class="percentage">
+                    <span class="input">Aggregate Persentage*</span>
+                    <p>{{finaldata.qualification.edu.persentage}}</p>
+                </div>
+                <div class="passingYear">
+                    <span class="input">Year Of Passing*</span>
+                    <p>
+                        {{finaldata.qualification.edu.passingy}}
+                    </p>
+                </div>
+                <div class="qualificationLevel horizontal">
+                    <div class="mainqualification">
+                        <span class="input">Qualification*</span>
+                        <p>
+                            {{finaldata.qualification.edu.qualification}}
+                        </p>
+                    </div>
+
+                    <div class="subqualification">
+                        <span class="input">Stream*</span>
+                        <p>
+                            {{finaldata.qualification.edu.stream}}
+                        </p>
+                    </div>
+
+                </div>
+                <div class="collage horizontal">
+                    <div class="maincollege">
+                        <span class="input">College*</span>
+                        <p>
+                            {{finaldata.qualification.edu.collage}}
+                        </p>
+                    </div>
+
+                    <div class="subcollege">
+                        <span class="input">If others, please enter your college name</span>
+                        <p>{{finaldata.qualification.edu.ocollage}}</p>
+                    </div>
+                </div>
+                <div class="collageCity">
+                    <span class="input">Where is your collage located?*</span>
+                    <p>{{finaldata.qualification.edu.collagecity}}</p>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="qualification_title">
+            <p>Professional Qualifications</p>
+            <div>
+                <img src="../../../assets/quantum_screen_assets/icons/arrow-down.svg" alt="">
+            </div>
+        </div>
+
+        <div class="fresher_experienced">
+            <span>Applicant Type*</span> <br>
+            <div>
+                <!-- <p></p> -->
+                <p>{{finaldata.qualification.prof.fresher}}</p>
+            </div>
+        </div>
+
+        <div class="main_details">
+            <form action="">
+                <div class="tExp" *ngIf="finaldata.qualification.prof.fresher !== 'fresher'">
+                    <span class="input">Years Of Experience*</span>
+                    <p>{{finaldata.qualification.prof.expY}}</p>
+                </div>
+                <div class="cCTC" *ngIf="finaldata.qualification.prof.fresher !== 'fresher'">
+                    <span class="input">Current CTC* (in Rupees)</span>
+                    <p>{{finaldata.qualification.prof.currentCTC}}</p>
+                </div>
+                <div class="eCTC" *ngIf="finaldata.qualification.prof.fresher !== 'fresher'">
+                    <span class="input">Expected CTC* (in Rupees)</span>
+                    <p>{{finaldata.qualification.prof.expectedCTC}}</p>
+                </div>
+                <div class="techExpert" *ngIf="finaldata.qualification.prof.fresher !== 'fresher'">
+                    <span class="input">Select All Technology You Are Expertise In*</span>
+                        <p *ngFor="let i of finaldata.qualification.prof.techexpert">{{i}}</p>
+
+                    <span class="input" >If Others, Please Mention</span>
+                    <p>{{finaldata.qualification.prof.othertechexpert}}</p>
+
+                </div>
+                <div class="techFamil">
+                    <span class="input">Select All Technology You Are Familiar In</span>
+                        <p *ngFor="let i of finaldata.qualification.prof.techfamil">{{i}}</p>
+
+                    <span class="input">If Others, Please Mention</span>
+                    <p>{{finaldata.qualification.prof.othertechfamil}}</p>
+
+                </div>
+                <div class="onNotic" *ngIf="finaldata.qualification.prof.fresher !== 'fresher'">
+                    <span class="input">Are You Currently On Notice Period?*</span>
+                    <div class="radio">
+                        <p>{{finaldata.qualification.prof.onNotic}}</p>
+
+                    </div>
+                </div>
+                <div class="duration" *ngIf="finaldata.qualification.prof.fresher !== 'fresher'">
+                    <div class="date">
+                        <span class="input">If Yes, when will your notice period end?*</span>
+                        <p>{{finaldata.qualification.prof.noticdate}}</p>
+                    </div>
+                    <div class="durationMonth">
+                        <span class="input">How long is your notice period?* (Mention in months)</span>
+                        <p>
+                            {{finaldata.qualification.prof.durationNotic}}
+                        </p>
+                    </div>
+
+                </div>
+                <div class="prevTest">
+                    <span class="input">Have You Appeared For Any Test By Zeus in the past 12 months?*</span>
+                    <div class="radio">
+                        <p>{{finaldata.qualification.prof.prevapply}}</p>
+
+                    </div>
+                    <span class="input">If Yes, which role did you apply for?</span>
+                    <p>{{finaldata.qualification.prof.whichRole}}</p>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

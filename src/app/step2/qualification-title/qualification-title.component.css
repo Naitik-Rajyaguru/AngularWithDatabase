@@ -1,0 +1,30 @@
+body {
+  margin: 0px;
+}
+
+body * {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+.qualification_title {
+  background-color: #DBEFFF;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1607843137);
+  display: flex;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+
+.qualification_title > p {
+  padding: 15px;
+  margin: 0px;
+}
+
+.qualification_title > div {
+  padding: 15px 0px;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  border-left: 2px solid rgba(0, 0, 0, 0.1607843137);
+}/*# sourceMappingURL=qualification-title.component.css.map */

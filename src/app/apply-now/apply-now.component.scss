@@ -1,0 +1,46 @@
+body{
+  // margin: 20px;
+  display: grid;
+  // background-color: pink;
+}
+body *{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+input[type=checkbox]{
+  accent-color: green;
+  transform: scale(1.2);
+}
+input[type=radio]{
+  accent-color: green;
+  transform: scale(1.2);
+}
+hr{
+  border: none;
+  background-color: #666666;
+  height: 1px;
+}
+.slotandpreferences{
+  margin: 20px;
+
+  .resume{
+      font-size: 14px;
+      color: #1F7A54;
+      display: flex;
+      gap: 5px;
+  }
+  div{
+      p{
+          span{
+              margin-left: 4px;
+          }
+      }
+  }
+  .input{
+      font-size: 12px;
+      color: #666666;
+  }
+
+  padding: 0px 10px;
+}

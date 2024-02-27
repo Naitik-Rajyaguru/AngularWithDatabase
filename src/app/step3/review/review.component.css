@@ -1,0 +1,32 @@
+body {
+  display: grid;
+  background-color: #EEEEEE;
+}
+
+body * {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #222222;
+  font-size: 16px;
+}
+
+.i {
+  display: flex;
+  margin: 20px;
+  background-color: #EEEEEE;
+  /* padding: 10px; */
+}
+
+.i > p {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.i > .edit {
+  margin-left: auto;
+}
+
+.i > p > img {
+  width: 18px;
+  height: 18px;
+}/*# sourceMappingURL=review.component.css.map */

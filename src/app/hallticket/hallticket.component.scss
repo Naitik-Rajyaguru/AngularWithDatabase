@@ -1,0 +1,54 @@
+body *{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 14px; 
+}
+body{
+    height: 100vh;
+    // background-color: #0000003D;
+    
+}
+span{
+    color: #666666;
+    font-size: 12px;
+}
+.hallticket{
+    padding: 10px;
+    background-color: #00000018;
+    height: fit-content;
+    margin-top: 100px;
+    box-shadow: 0px 4px 6px #0000003D;
+    opacity: 1;
+    .portal{
+        text-align: center;
+        width: fit-content;
+        margin: 0px auto;
+        img{
+            position: relative;
+            top: -50px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    button{
+        display: block;
+        width: 202px;
+        height: 28px;
+        background-color: #3FD28B;
+        border: none;
+        box-shadow: 0px 3px 5px #0000003D;
+        opacity: 1;
+        margin: 5px auto;
+
+    }
+}
+hr{
+    height: 1px;
+    border: none;
+    background: #000;
+    opacity: 12%;
+}
+pre, p{
+    margin-top: 10px;
+    font-size: 14px;
+}

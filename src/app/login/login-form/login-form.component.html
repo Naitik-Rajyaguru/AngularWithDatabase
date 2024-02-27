@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+</head>
+<body>
+
+    <div class="loginForm">
+        <div class="main_content form" >
+            <form action="" (ngSubmit)="onSubmit()">
+                <div class="form_title">
+                    <p>Log in</p>
+                </div>
+                <span *ngIf="!formData.email" class="requred">Email format required</span>
+                <div class="crediantial username">
+                    <input type="email" name="email" id="" placeholder="Email ID*" [(ngModel)]="formData.email">
+                    <a href="http://">FORGOT EMAIL ID</a>
+                </div>
+
+                <span *ngIf="!formData.password" class="requred">Required</span>
+                <div class="crediantial password">
+                    <input type={{variable}} name="password" id="" placeholder="Password*" [(ngModel)]="formData.password">
+                    <img src="../../../assets/quantum_screen_assets/icons/preview.svg" alt="" (click)="passwordvisible()">
+                    <a href="http://" >FORGOT PASSWORD?</a>
+                </div>
+
+
+                <div class="checkbox">
+                    <input type="checkbox" name="checked" id="" [(ngModel)]="formData.remember" value="rememberme"> Remember Me
+                </div>
+
+                    <!-- <br> -->
+                <div class="button">
+                    <button type="submit" (click)="goTo()">LOG IN</button>
+                </div>
+
+                <div class="create_account">
+                    <p>Not Registered yet?</p>
+                    <a (click)="Create()">CREATE AN ACCOUNT</a>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="footer">
+            <div class="contact">
+                <span>
+                    <a href="">About us</a>
+                </span>
+                <span class="divider"></span>
+                <span>
+                    <a href="">Contact us</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

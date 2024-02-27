@@ -1,0 +1,32 @@
+<app-qualification-title [innerText]="whichDiscription" (eventEm)="changeVariable()"></app-qualification-title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div [class]="{'discription':true, 'nodis':variable}" *ngIf="data">
+        <span class="input">Gross compensation package :</span>
+        <p>Rs. {{data[whichDiscription].package}} lpa</p>
+        <hr>
+        <span class="input">Role Description :</span>
+        <div>
+            <ul>
+                <li *ngFor="let x of data[whichDiscription].Role_Discription"> {{x}}</li>
+            </ul>
+        </div>
+        <span class="input">Requirements :</span>
+        <div>
+            <ul>
+                <li *ngFor="let x of data[whichDiscription].requirements">{{x}}</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

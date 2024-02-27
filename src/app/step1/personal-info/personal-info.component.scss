@@ -1,0 +1,126 @@
+body{
+    display: grid;
+    margin: 0px;
+    background-color: #EEEEEE;
+}
+
+.personalinfo{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+    // background-color: pink;
+    margin: 20px;
+    padding: 10px;
+}
+
+body *{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    color: #222222;
+    font-size: 16px;
+}
+
+body span{
+    color: #666666;
+    font-size: 12px;
+}
+
+input[type=checkbox] {
+    accent-color: #1F7A54;
+    transform: scale(1.3);
+}
+
+input[type=text]{
+    width: 100%;
+}
+input[type=email]{
+    width: 100%;
+}
+input[type=file]{
+  display: none;
+}
+.Resume>p>label{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.Resume >p>label {
+    color: #1F7A54;
+    font-size: 14px;
+    cursor: pointer;
+}
+.Resume>p>label>img{
+    margin-left: -4px;
+    color: #1F7A54;
+    cursor: pointer;
+}
+.subdetail{
+    margin: 30px 0px;
+}
+.subdetail > p>input{
+    border: none;
+    border-bottom: 2px solid #0000003D;
+    /* width: 100%; */
+}
+.subdetail>span{
+    display: block;
+    /* margin-bottom: 1px; */
+}
+.details{
+    /* border: 1px solid black; */
+    width: 50%;
+    padding: 10px;
+}
+.profilepic{
+    /* border: 1px solid black; */
+    // width: 650px;
+    display: block;
+    margin-left: auto;
+    padding: 10px;
+}
+.profilepic>div{
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    text-align: center;
+}
+.profilepic>div>p>label>img{
+    width: 112px;
+    height: 134px;
+    border-radius: 50%;
+}
+.profilepic>div>p>label{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.footer_button{
+  background-color: #EEEEEE;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+.footer_button > button{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  width: 90px;
+  height: 28px;
+  border: none;
+  background: #3FD28B 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 5px #0000003D;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.subdetail > .required{
+  display: none;
+  color: red;
+}
+

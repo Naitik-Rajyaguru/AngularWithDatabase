@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+</head>
+<body>
+    <div class="personalinfo">
+        <div class="details">
+            <form>
+                <div class="subdetail">
+                    <span class="input">First Name*</span>
+                    <p><input type="text" name="fName" id="" [(ngModel)]="personalData.fName"></p>
+                    <span *ngIf="!personalData.fName" class="required">required</span>
+                </div>
+                <div class="subdetail">
+                    <span class="input">Last Name*</span>
+                    <p><input type="text" name="lname" id="" [(ngModel)]="personalData.lName"></p>
+                    <span *ngIf="!personalData.lName" class="required">required</span>
+                </div>
+                <div class="subdetail">
+                    <span class="input">Email*</span>
+                    <p><input type="email" name="Email" id="" [(ngModel)]="personalData.Email"></p>
+                    <span *ngIf="!personalData.Email" class="required">Email Not proper format</span>
+                </div>
+                <div class="subdetail">
+                    <span class="input">Phone Number*</span>
+
+                    <p> + <input type="text" name="" id="" style="width: 15px;"> &nbsp; <input type="text" name="phone" id="" style="width: 95px;" [(ngModel)]="personalData.phone">
+                    </p>
+                    <span *ngIf="!personalData.phone" class="required">required</span>
+                </div>
+                <div class="subdetail">
+                    <div class="Resume">
+                        <p><label for="file"><img src="..\..\assets\quantum_screen_assets\icons\Upload_black_24dp.svg" alt=""><input type="file" name="resume" id="file" [(ngModel)]="personalData.Resume"  accept="application/pdf">UPLOAD FILE</label>
+                          <span>{{personalData.Resume.split('\\').pop()}}</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="subdetail">
+                    <span class="input">Enter Portfolio URL (if any)</span>
+                    <p><input type="text" name="portfolio" id="" [(ngModel)]="personalData.portfolio"></p>
+                </div>
+                <div class="subdetail">
+                    <span class="input">Preferred Job Roles*</span>
+                    <p *ngFor="let item of roles; let i = index"><input type="checkbox" name="'roles'+ {{i}}" [(ngModel)]="item.selected" value="{{item.name}}"> {{item.name}}</p>
+                    <!-- <p><input type="checkbox" name="ID" id="" [(ngModel)]="personalData.ID"> Instructional Designer</p>
+                    <p><input type="checkbox" name="SE" id="" [(ngModel)]="personalData.SE"> Software Engineer </p>
+                    <p><input type="checkbox" name="QA" id="" [(ngModel)]="personalData.QA"> Software Quality Engineer </p> -->
+                    <span *ngIf="jobrolecondition" style="color: red;">Select at least one role</span>
+                </div>
+                <div class="subdetail">
+                    <span class="input">If You Are Registering Via A Referral, Please Mention Full Name Of The Employee Who Referred You</span>
+                    <p><input type="text" name="Rname" id="" [(ngModel)]="personalData.Rname"></p>
+                </div>
+                <div class="subdetail">
+                    <p><input type="checkbox" name="sub" id="" [(ngModel)]="personalData.sub"> Send me job related updates via mail</p>
+                </div>
+
+            </form>
+        </div>
+        <div class="profilepic">
+            <div>
+              <p>
+                <label for="image" style="font-size: 12px; color: #1F7A54;">
+                  <img src="../../assets/quantum_screen_assets/icons/account_circle.svg" alt="Profile pic">
+                  <input type="file" name="" id="image"  accept="image/jpeg,image/png" [(ngModel)]="personalData.profilepic"> UPLOAD DISPLAY PICTURE
+                </label>
+                <span>{{personalData.profilepic.split('\\').pop()}}</span>
+              </p>
+                <p style="font-size: 10px; color: #757575;">Max. image size : 5 MB</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer_button">
+      <button *ngIf="pshow" (click)="goToPrv()">PREVIOUS</button>
+      <button *ngIf="nshow" (click)="goToNext()">NEXT</button>
+    </div>
+
+</body>
+</html>
+
+
+<!-- <app-footer-button next="/step2" prv="/login" loginURL="http://localhost:5241/Step1/" [data]='personalData'></app-footer-button> -->

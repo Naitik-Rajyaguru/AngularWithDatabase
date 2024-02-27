@@ -1,0 +1,110 @@
+body {
+  display: grid;
+}
+
+body * {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+span {
+  color: #666666;
+  font-size: 12px;
+  display: block;
+}
+
+input[type=text] {
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2392156863);
+  width: 100%;
+}
+
+input[type=radio] {
+  margin: 0px;
+  accent-color: #1F7A54;
+  transform: scale(1.3);
+}
+
+input[type=checkbox] {
+  margin: 0px;
+  accent-color: #1F7A54;
+  transform: scale(1.3);
+}
+
+select {
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2392156863);
+  width: 100%;
+}
+
+.educational_qualification {
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+  margin-top: 0px;
+  border-radius: 2px;
+}
+
+.educational_qualification > form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+
+.percentage, .passingYear, .collageCity {
+  grid-column: 1/1;
+}
+
+.horizontal {
+  grid-column: 1/span 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.main_details {
+  background-color: white;
+  margin: 20px;
+  margin-top: 0px;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.main_details > form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.eCTC, .cCTC, .tExp, .onNotic {
+  grid-column: 1/1;
+}
+
+.techExpert, .techFamil, .prevTest {
+  grid-column: 1/span 2;
+}
+
+.duration {
+  grid-column: 1/span 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.no {
+  display: none;
+}
+
+.fresher_experienced {
+  margin: 0px 20px 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.fresher_experienced > div {
+  display: flex;
+  gap: 20px;
+}/*# sourceMappingURL=qualifications.component.css.map */

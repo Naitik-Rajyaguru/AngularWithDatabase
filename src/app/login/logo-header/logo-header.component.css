@@ -1,0 +1,9 @@
+body {
+  margin: 0px;
+}
+
+.top_icon_bar {
+  background-image: url("../../../../../quantum_screen_assets/header_pattern_image.png");
+  background-color: black;
+  opacity: 1;
+}/*# sourceMappingURL=logo-header.component.css.map */

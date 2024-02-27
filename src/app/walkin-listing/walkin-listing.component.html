@@ -1,0 +1,14 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+</head>
+<body>
+    <app-logo-header [imgUrl]="'../../assets/quantum_screen_assets/icons/Zeus-LMS-logo.svg'"></app-logo-header>
+    <app-jobcard [apply]='false' [viewde]="true" *ngFor="let data of data" [tempdata]="data"></app-jobcard>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+</head>
+<body>
+    <div class="footer_button">
+        <button *ngIf="buttonservice.pshow" (click)="goToPrv()">PREVIOUS</button>
+        <button *ngIf="buttonservice.nshow" (click)="goToNext()">NEXT</button>
+    </div>
+</body>
+</html>

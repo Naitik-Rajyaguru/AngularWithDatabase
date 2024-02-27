@@ -1,0 +1,23 @@
+{
+    "Instructional Designer" : {
+        "package" : "5,00,000",
+        "Role_Discription" : ["Discription for instructinoal designer", "Discription for instructinoal designer", "Discription for instructinoal designer"],
+        "requirements" : ["requirements for instructinoal designer", "requirements for instructinoal designer", "requirements for instructinoal designer"]
+    },
+
+    "Software enginneer" : {
+        "package" : "6,00,000",
+        "Role_Discription" : ["Discription for Software enginneer", "Discription for Software enginneer", "Discription for Software enginneer"],
+        "requirements" : ["requirements for Software enginneer", "requirements for Software enginneer", "requirements for Software enginneer"]
+    },
+
+    "Software Quality enginneer" : {
+        "package" : "8,00,000",
+        "Role_Discription" : ["Discription for Software Quality enginneer", "Discription for Software Quality enginneer", "Discription for Software Quality enginneer"],
+        "requirements" : ["requirements for Software Quality enginneer", "requirements for Software Quality enginneer", "requirements for Software Quality enginneer"]
+    }
+
+
+
+}
+
